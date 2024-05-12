@@ -2,32 +2,18 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+h2 {
+  @apply text-[28px] leading-[34px] hover:text-primary transition-all duration-300 ease-in-out mb-4;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+h5 {
+  @apply text-[18px] font-[500] leading-[26px] tracking-[1px] mb-4 hover:text-primary transition-all duration-300 ease-in-out;
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+.category {
+  @apply block  leading-[16px] text-[12px] uppercase  hover:underline;
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
+.author {
+  @apply text-secondary-900 text-[12px];
 }

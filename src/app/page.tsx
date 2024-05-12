@@ -1,113 +1,207 @@
 import Image from "next/image";
+import Link from "next/link";
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <div className="z-10 w-full max-w-5xl items-center justify-between font-mono text-sm lg:flex">
-        <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
-          Get started by editing&nbsp;
-          <code className="font-mono font-bold">src/app/page.tsx</code>
-        </p>
-        <div className="fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:size-auto lg:bg-none">
-          <a
-            className="pointer-events-none flex place-items-center gap-2 p-8 lg:pointer-events-auto lg:p-0"
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{" "}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className="dark:invert"
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
+    <>
+      <header className="header mb-16">
+        <div className="container">
+          <div className="header-content py-[80px] text-center max-w-[650px] mx-auto">
+            <div className="header-logo mb-8">
+              <Link href={"#"}>
+                <Image src={"/logo.png"} alt="Blog Logo" width={298} height={100} className="mx-auto" />
+              </Link>
+            </div>
+            <div className="header-content">
+              <p>
+                Hello! My name is Suzette. I’m a blogger based in Melbourne. I spend a lot of time to talk to strangers and try to understand global
+                culture...
+              </p>
+            </div>
+          </div>
+          <div className="header-menu">
+            <nav>
+              <ul className="flex justify-center items-center gap-8">
+                <li>
+                  <Link href={"#"}>Home</Link>
+                </li>
+                <li>
+                  <Link href={"#"}>Travel</Link>
+                </li>
+                <li>
+                  <Link href={"#"}>Food</Link>
+                </li>
+              </ul>
+            </nav>
+          </div>
         </div>
-      </div>
-
-      <div className="relative z-[-1] flex place-items-center before:absolute before:h-[300px] before:w-full before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-full after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700 before:dark:opacity-10 after:dark:from-sky-900 after:dark:via-[#0141ff] after:dark:opacity-40 sm:before:w-[480px] sm:after:w-[240px] before:lg:h-[360px]">
-        <Image
-          className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
-
-      <div className="mb-32 grid text-center lg:mb-0 lg:w-full lg:max-w-5xl lg:grid-cols-4 lg:text-left">
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Docs{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-sm opacity-50">
-            Find in-depth information about Next.js features and API.
-          </p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Learn{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-sm opacity-50">
-            Learn about Next.js in an interactive course with&nbsp;quizzes!
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Templates{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-sm opacity-50">
-            Explore starter templates for Next.js.
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Deploy{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-balance text-sm opacity-50">
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
-    </main>
+      </header>
+      <main>
+        <section className="featured relative mb-20">
+          <div className="container">
+            <div className="feature-inner-box  py-16 px-8 border-[1px] border-primary border-solid">
+              <div className="section-title absolute left-[50%] top-[-10px] px-4 bg-white translate-x-[-50%]">
+                <h3 className=" text-[12px] md:text-[18px] tracking-[3px]">Featured Things</h3>
+              </div>
+              <div className="lg:grid grid-cols-4 gap-4">
+                <div className="col-span-4 mb-8">
+                  <div className="section-hero bg-secondary rectangle-on-hover">
+                    <div className="grid grid-cols-2 items-center gap-8">
+                      <div className="col-span-2 lg:col-span-1">
+                        <Link href={"#"}>
+                          <div className="featured-image">
+                            <Image src={"/placeholder-01.jpg"} alt="" width={960} height={720} />
+                          </div>
+                        </Link>
+                      </div>
+                      <div className="col-span-2 lg:col-span-1 px-4 pb-8 lg:pr-[80px] lg:pl-0 lg:pb-0">
+                        <Link href={"#"} className="text-[24px] font-[800] leading-[32px] mb-4 inline-block">
+                          Why i am so happy at this <span className="text-primary">weekend's</span>
+                        </Link>
+                        <p className="mb-4">
+                          Exercitation photo booth stumptown tote bag Banksy, Proin elit small batch freegan sed. Craft beer elit seitan exercitation,
+                          photo booth et 86-bit kale chips proident chillwave deep v laborum. Aliquip veniam delectus, Marfa eiusmod Pinterest in do
+                          umami readymade swag.
+                        </p>
+                        <Link href={"#"} className="text-primary border-[1px] border-solid border-primary py-2 px-6 ">
+                          Continue Reading
+                        </Link>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div className="col-span-2 mb-8 lg:mb-0">
+                  <div className="flex lg:flex-row flex-col items-center justify-start bg-secondary gap-4 lg:gap-8 lg:pr-8 rectangle-on-hover">
+                    <Link href={"#"}>
+                      <div className="featured-image">
+                        <Image src={"/placeholder-03.jpg"} alt="" width={672} height={750} />
+                      </div>
+                    </Link>
+                    <div className="content">
+                      <Link href={"#"}>
+                        <h5>23 Amazing Places to Eat, Drink and Rest in New York City</h5>
+                      </Link>
+                      <Link href={"#"} className="category">
+                        Lifestyle
+                      </Link>
+                      <p className="author">
+                        By - <Link href={"#"}>Arjun Jhukal</Link>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div className="col-span-1  mb-8 lg:mb-0">
+                  <div className="text-on-hover">
+                    <Link href={"#"}>
+                      <div className="featured-image">
+                        <Image src={"/placeholder-04.jpg"} alt="" width={672} height={750} />
+                      </div>
+                    </Link>
+                    <div className="content">
+                      <Link href={"#"}>
+                        <h5>We got Married </h5>
+                      </Link>
+                      <Link href={"#"} className="category">
+                        Lifestyle
+                      </Link>
+                      <p className="author">
+                        By - <Link href={"#"}>Arjun Jhukal</Link>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div className="col-span-1 ">
+                  <div className="text-on-hover">
+                    <Link href={"#"}>
+                      <div className="featured-image">
+                        <Image src={"/placeholder-02.jpg"} alt="" width={672} height={750} />
+                      </div>
+                    </Link>
+                    <div className="content">
+                      <Link href={"#"}>
+                        <h5>Magazine Pile, The Great Discontent </h5>
+                      </Link>
+                      <Link href={"#"} className="category">
+                        Lifestyle
+                      </Link>
+                      <p className="author">
+                        By - <Link href={"#"}>Arjun Jhukal</Link>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section className="latest mb-20 relative">
+          <div className="container">
+            <div className="section-title  absolute left-[50%] top-[-10px] px-4 bg-white translate-x-[-50%] ">
+              <h3 className=" text-[12px] md:text-[18px] tracking-[3px]">Latest Article</h3>
+            </div>
+            <div className="latest-inner-box py-16 px-8 border-[1px] border-primary border-solid">
+              <div className="grid grid-cols-2 gap-8 lg:gap-20">
+                <div className="col-span-2 lg:col-span-1">
+                  <div className="rectangle-on-hover">
+                    <Link href={"#"} className=" block mb-8">
+                      <div className="featured-image">
+                        <Image src={"/placeholder-05.jpg"} alt="" width={752} height={660} />
+                      </div>
+                    </Link>
+                    <div className="content text-center">
+                      <ul className="flex justify-center items-center gap-12 mb-4">
+                        <li>
+                          <Link href={"#"} className="text-primary text-[18px] font-[500] uppercase">
+                            Travel
+                          </Link>
+                        </li>
+                        <li>
+                          <span className="uppercase">July 25, 2016</span>
+                        </li>
+                      </ul>
+                      <Link href={"#"}>
+                        <h2>My Favorite New Travel Destinations</h2>
+                      </Link>
+                      <p>
+                        Delightful remarkably mr on announcing themselves entreaties favourable. About to in so terms voice at. Equal an would is
+                        found seems of. The particular friendship one sufficient terminated frequently themselves...
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div className="col-span-2 lg:col-span-1 lg:mt-32">
+                  <div className="rectangle-on-hover">
+                    <Link href={"#"} className=" block mb-8">
+                      <div className="featured-image">
+                        <Image src={"/placeholder-06.jpg"} alt="" width={752} height={660} />
+                      </div>
+                    </Link>
+                    <div className="content text-center">
+                      <ul className="flex justify-center items-center gap-12 mb-4">
+                        <li>
+                          <Link href={"#"} className="text-primary text-[18px] font-[500] uppercase">
+                            Travel
+                          </Link>
+                        </li>
+                        <li>
+                          <span className="uppercase">July 25, 2016</span>
+                        </li>
+                      </ul>
+                      <Link href={"#"}>
+                        <h2>My Favorite New Travel Destinations</h2>
+                      </Link>
+                      <p>
+                        Delightful remarkably mr on announcing themselves entreaties favourable. About to in so terms voice at. Equal an would is
+                        found seems of. The particular friendship one sufficient terminated frequently themselves...
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+    </>
   );
 }
