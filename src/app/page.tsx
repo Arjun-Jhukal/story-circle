@@ -59,9 +59,9 @@ export default function Home() {
                           Why i am so happy at this <span className="text-primary">weekend&apos;s</span>
                         </Link>
                         <p className="mb-4">
-                          Exercitation photo booth stumptown tote bag Banksy, Proin elit small batch freegan sed. Craft beer elit seitan exercitation,
+                          {`Exercitation photo booth stumptown tote bag Banksy, Proin elit small batch freegan sed. Craft beer elit seitan exercitation,
                           photo booth et 86-bit kale chips proident chillwave deep v laborum. Aliquip veniam delectus, Marfa eiusmod Pinterest in do
-                          umami readymade swag.
+                          umami readymade swag.`}
                         </p>
                         <Link href={"#"} className="text-primary border-[1px] border-solid border-primary py-2 px-6 ">
                           Continue Reading
