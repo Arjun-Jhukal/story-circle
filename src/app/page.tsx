@@ -56,7 +56,7 @@ export default function Home() {
                       </div>
                       <div className="col-span-2 lg:col-span-1 px-4 pb-8 lg:pr-[80px] lg:pl-0 lg:pb-0">
                         <Link href={"#"} className="text-[24px] font-[800] leading-[32px] mb-4 inline-block">
-                          Why i am so happy at this <span className="text-primary">weekend's</span>
+                          Why i am so happy at this <span className="text-primary">weekend&apos;s</span>
                         </Link>
                         <p className="mb-4">
                           Exercitation photo booth stumptown tote bag Banksy, Proin elit small batch freegan sed. Craft beer elit seitan exercitation,
