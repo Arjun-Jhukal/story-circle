@@ -14,8 +14,8 @@ export default function Home() {
             </div>
             <div className="header-content">
               <p>
-                Hello! My name is Suzette. I’m a blogger based in Melbourne. I spend a lot of time to talk to strangers and try to understand global
-                culture...
+                Hello! My name is Suzette. I&rsquo;m a blogger based in Melbourne. I spend a lot of time to talk to strangers and try to understand
+                global culture...
               </p>
             </div>
           </div>
