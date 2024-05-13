@@ -60,6 +60,15 @@
     position: relative;
     overflow: hidden;
 
+    .date {
+      position: absolute;
+      bottom: 20px;
+      left: 25px;
+      background-color: #9a9e7a;
+      color: #fff;
+      padding: 4px 16px;
+    }
+
     &::after {
       content: "";
       position: absolute;
@@ -134,6 +143,16 @@
           }
         }
       }
+    }
+  }
+}
+
+.article-list {
+  &-item {
+    position: relative;
+
+    .featured-image {
+      margin-bottom: 16px;
     }
   }
 }
