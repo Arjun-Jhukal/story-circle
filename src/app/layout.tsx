@@ -22,11 +22,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={raleway.className}>
-      <body>
-        <Header />
-        {children}
-        <Footer />
-      </body>
+      <body>{children}</body>
     </html>
   );
 }
