@@ -1,0 +1,13 @@
+.footer {
+  @apply py-12 lg:py-6 bg-secondary-100 text-white;
+
+  p,
+  ul li a {
+    @apply lg:text-[18px] text-[16px];
+  }
+  ul {
+    li {
+      @apply mb-4 lg:mb-0;
+    }
+  }
+}
