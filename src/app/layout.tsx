@@ -4,6 +4,7 @@ import "./globals.css";
 import "@/scss/style.scss";
 import Footer from "@/section/footer";
 import Header from "@/section/header";
+import { performRequest } from "@/service/request";
 
 export const metadata: Metadata = {
   title: "Create Next App",

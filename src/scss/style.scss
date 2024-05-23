@@ -100,3 +100,61 @@
     }
   }
 }
+
+// Blog Detail page
+.blog-featured {
+  ul {
+    gap: 40px;
+    li {
+      &:not(:first-child) {
+        list-style-type: disc;
+
+        &::marker {
+          @apply text-primary;
+        }
+      }
+    }
+  }
+}
+
+.blog-content {
+  &-wrapper {
+    p,
+    ul,
+    img {
+      margin-bottom: 32px;
+    }
+    a,
+    strong {
+      @apply text-primary;
+      font-weight: 600;
+    }
+    ul {
+      padding-left: 40px;
+      li {
+        list-style-type: disc;
+        &::marker {
+          @apply text-primary;
+        }
+      }
+    }
+    h1,
+    h2,
+    h3,
+    h4,
+    h5 {
+      margin: 32px 0;
+    }
+  }
+  .quote {
+    @apply bg-primary text-white p-12;
+
+    em {
+      @apply block;
+
+      &:not(:last-child) {
+        margin-bottom: 32px;
+      }
+    }
+  }
+}

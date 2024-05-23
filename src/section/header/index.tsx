@@ -5,8 +5,9 @@ import React from "react";
 
 import "./header.scss";
 import { usePathname } from "next/navigation";
+import { Category } from "@/interface";
 
-export default function Header() {
+export default function Header({ data }: { data: Array<Category> }) {
   const menuList = [
     {
       label: "Home",
@@ -30,11 +31,13 @@ export default function Header() {
     },
   ];
   const [showMobileMenu, setShowMobileMenu] = React.useState<boolean>(false);
+
   const [activeMenu, setActiveMenu] = React.useState({
-    label: "Home",
-    value: "home",
-    url: "/",
+    name: "Home",
+    id: "home",
+    slug: "/",
   });
+
   const pathname = usePathname();
   const navRef = React.useRef<HTMLElement | null>(null);
 
@@ -77,7 +80,7 @@ export default function Header() {
         </div>
         <div className={`header-menu ${showMobileMenu ? "show" : ""}`}>
           <nav ref={navRef}>
-            <div className="header-logo md:mb-4 flex justify-between items-center md:hidden mb-4 pb-4 px-4 border-b-[1px] border-primary border-solid">
+            <div className="header-logo md:mb-4 flex justify-between items-center md:hidden  pb-4 px-4 border-b-[1px] border-secondary border-solid">
               <Link href={"#"}>
                 <Image src={"/logo.png"} alt="Blog Logo" width={298} height={100} className="mx-auto max-w-[150px] md:max-w-[unset]" />
               </Link>
@@ -86,16 +89,22 @@ export default function Header() {
               </button>
             </div>
             <ul className="md:flex justify-center items-center gap-8">
-              {menuList.map((menu) => (
-                <li key={menu.label}>
+              {data?.map((menu) => (
+                <li key={menu.name}>
                   <Link
-                    href={menu.url}
+                    href={menu.slug}
                     onClick={(e) => {
                       setActiveMenu(menu);
+                      handleMobileMenuChange();
+                      console.log({
+                        activeMenu: menu.slug,
+                        pathname: pathname,
+                        isActive: pathname === `/${menu.slug}`,
+                      });
                     }}
-                    className={pathname === menu.url ? "active" : ""}
+                    className={pathname === `/${menu.slug}` ? "active" : ""}
                   >
-                    {menu.label}
+                    {menu.name}
                   </Link>
                 </li>
               ))}

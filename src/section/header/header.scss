@@ -50,37 +50,14 @@
       @apply bg-white h-screen max-w-[400px];
       ul {
         li {
-          @apply mb-4 md:mb-0;
           a {
-            @apply px-4 bg-white relative block;
-
-            &::after {
-              content: "";
-              position: absolute;
-              top: 100%;
-              left: 0;
-              width: 100%;
-              height: 1px;
-              background-color: #9a9e7a;
-              margin-top: 4px;
-              transform-origin: right bottom; /* Set transform-origin to left */
-              transform: scaleX(0);
-              transition: transform 0.3s ease-in-out;
-            }
-
-            &.active {
-              color: #9a9e7a;
-              //   &::after {
-              //     transform: scaleX(1);
-              //   }
-            }
+            @apply px-4 bg-white relative block border-b-[1px] border-solid border-secondary  py-4 md:py-0;
 
             &:hover {
-              color: #9a9e7a;
-              &::after {
-                transform: scaleX(1);
-                transform-origin: left bottom;
-              }
+              @apply bg-primary text-white;
+            }
+            &.active {
+              @apply bg-primary text-white;
             }
           }
         }
@@ -109,6 +86,40 @@
 
       nav {
         @apply bg-transparent h-auto max-w-[100%];
+
+        ul {
+          li {
+            a {
+              &::after {
+                content: "";
+                position: absolute;
+                top: 100%;
+                left: 0;
+                width: 100%;
+                height: 1px;
+                background-color: #9a9e7a;
+                margin-top: 4px;
+                transform-origin: right bottom; /* Set transform-origin to left */
+                transform: scaleX(0);
+                transition: transform 0.3s ease-in-out;
+              }
+
+              &.active {
+                color: #9a9e7a;
+                background-color: #fff;
+              }
+
+              &:hover {
+                color: #9a9e7a;
+                background-color: white;
+                &::after {
+                  transform: scaleX(1);
+                  transform-origin: left bottom;
+                }
+              }
+            }
+          }
+        }
       }
     }
   }
