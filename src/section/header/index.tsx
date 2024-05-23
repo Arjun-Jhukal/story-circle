@@ -8,28 +8,6 @@ import { usePathname } from "next/navigation";
 import { Category } from "@/interface";
 
 export default function Header({ data }: { data: Array<Category> }) {
-  const menuList = [
-    {
-      label: "Home",
-      value: "home",
-      url: "/",
-    },
-    {
-      label: "Lifestyle",
-      value: "lifestyle",
-      url: "/lifestyle",
-    },
-    {
-      label: "Travel",
-      value: "travel",
-      url: "/travel",
-    },
-    {
-      label: "Food",
-      value: "food",
-      url: "/food",
-    },
-  ];
   const [showMobileMenu, setShowMobileMenu] = React.useState<boolean>(false);
 
   const [activeMenu, setActiveMenu] = React.useState({
@@ -96,11 +74,6 @@ export default function Header({ data }: { data: Array<Category> }) {
                     onClick={(e) => {
                       setActiveMenu(menu);
                       handleMobileMenuChange();
-                      console.log({
-                        activeMenu: menu.slug,
-                        pathname: pathname,
-                        isActive: pathname === `/${menu.slug}`,
-                      });
                     }}
                     className={pathname === `/${menu.slug}` ? "active" : ""}
                   >

@@ -1,14 +1,15 @@
 import Image from "next/image";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
 import React from "react";
 
-export default function BlogDetailPage() {
+export default function BlogDetailPage({ params }: { params: { slug: string } }) {
   return (
     <main>
       <section className="blog-featured mb-20 lg:mb-32">
         <div className="container">
           <div className="section-title text-center mb-8">
-            <span className="text-primary inline-block mb-4">Food</span>
+            <span className="text-primary inline-block mb-4 capitalize">{params.slug}</span>
             <h2>We Got Married</h2>
             <ul className="flex justify-center items-center">
               <li>
