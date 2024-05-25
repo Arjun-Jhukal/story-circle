@@ -7,9 +7,9 @@ import React from "react";
 export default async function Layout({ children }: { children: React.ReactElement }) {
   const content = await performRequest({
     query: getHeaderData(),
-    variables: {
-      slug: "home",
-    },
+    // variables: {
+    //   slug: "home",
+    // },
   });
 
   return (

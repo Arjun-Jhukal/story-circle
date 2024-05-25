@@ -46,7 +46,7 @@ export default function BlogDetailPage({ params }: { params: { slug: string } })
               <li>Lorem ipsum dolor sit amet consectetur.</li>
               <li>Lorem ipsum dolor sit amet consectetur.</li>
             </ul>
-            <Image src={"/banner.jpeg"} alt="" width={400} height={400} />
+            <Image src={"/banner.jpeg"} alt="" width={1920} height={992} />
             <p>
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate, aspernatur dicta ullam suscipit asperiores fuga voluptatem sapiente
               molestiae a <strong>nemo et</strong> eaque maxime quos! Cupiditate voluptatibus earum voluptates. Amet consequuntur libero porro!

@@ -42,7 +42,7 @@ export default function Header({ data }: { data: Array<Category> }) {
       <div className="container">
         <div className="header-content py-4 md:py-[60px] text-center max-w-[650px] mx-auto">
           <div className="header-logo md:mb-4 flex justify-between items-center md:inline-block ">
-            <Link href={"#"}>
+            <Link href={"/"}>
               <Image src={"/logo.png"} alt="Blog Logo" width={298} height={100} className="mx-auto max-w-[150px] md:max-w-[unset]" />
             </Link>
             <button type="button" className="hamburger md:hidden" onClick={handleMobileMenuChange}>
@@ -59,7 +59,7 @@ export default function Header({ data }: { data: Array<Category> }) {
         <div className={`header-menu ${showMobileMenu ? "show" : ""}`}>
           <nav ref={navRef}>
             <div className="header-logo md:mb-4 flex justify-between items-center md:hidden  pb-4 px-4 border-b-[1px] border-secondary border-solid">
-              <Link href={"#"}>
+              <Link href={"/"}>
                 <Image src={"/logo.png"} alt="Blog Logo" width={298} height={100} className="mx-auto max-w-[150px] md:max-w-[unset]" />
               </Link>
               <button type="button" className="hamburger md:hidden" onClick={handleMobileMenuChange}>
@@ -70,12 +70,12 @@ export default function Header({ data }: { data: Array<Category> }) {
               {data?.map((menu) => (
                 <li key={menu.name}>
                   <Link
-                    href={menu.slug}
+                    href={menu.id}
                     onClick={(e) => {
                       setActiveMenu(menu);
                       handleMobileMenuChange();
                     }}
-                    className={pathname === `/${menu.slug}` ? "active" : ""}
+                    className={pathname === `/${menu.id}` ? "active" : ""}
                   >
                     {menu.name}
                   </Link>
